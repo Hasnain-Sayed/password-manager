@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h1>&lt;Password Manager&Backslash;&gt;</h1>
+            <div><button
+                    class="bg-blue-700 pr-2 flex rounded-full w-fit  justify-between items-center ring-1 ring-white"><img
+                        class="object-center invert rounded-full w-8 md:w-10"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABr0lEQVR4nO2Vu0oDQRSGPxVUFCwUJF4RL621F0RRsDOoqLWNhZdokdbKt1CJF7QSBEWCFoJPYGMVKy3shIgx3mKiEpiFZZiZnd0EscgPQ9jN+c+35zBnBkr6h2oHIsAFkADSYiXEuxWgrZjAFmATyAI/HisHHAEdhUIngRcLoLxSQDgodE1U4Bfqrn41SKW5AqBuuHXlrYr29gG9QMwDFBNxA1Lbm23AquRVUjeGgUagQvyOiPeOqiX/ts3IqHZvN/7UI/mzopNaRTQtHPQJHlLkWDYZzhWGY4LpVMoTNwXfKsD9AcFy1QlTcMpjY/lRreJQ0SqtANcRTA1SnldT8J0CPBEQPC3luTcFxxXgazGXflQD3Eh5zkyGqGacLm1PHzGvV4ocUZMpf59mNPA3YAeYBTolX/55DtgD3hXeDNDk9cUHLsM8cKL4gHHJMwp8GM7wfduLPykMj0A9cCgSPwHrGt+GBvpsU62jGde1uGDp6dJci1O2UEdLwDfwAIxZ7OxyBXSRgAqL9roTmuTEJINUKis/RlvAlwX4E9gFQhRRIXFtVmr+L/Mx6yXxZ/oFDl37po6ZopsAAAAASUVORK5CYII="
+                        alt="Github logo"><span class="md:text-md text-sm">GitHub</span></button></div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            
+            <h2 class="parichar">🔐PassVault</h2>
+            <p class="parichar">//Local Password Manager</p>
+
+            <div class="add-cart">
+                <div class="card-title">Add New Entry</div>
+
+                <form id="entryForm">
+                    <div class="field">
+                        <label for="siteInput">Website / App Name</label>
+                        <div class="input-wrap">
+                            <input type="text" id="siteInput" placeholder="e.g. github.com" autocomplete="off" required />
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="passInput">Password</label>
+                        <div class="input-wrap">
+                            <input type="password" id="passInput" class="password-input" placeholder="Enter password"
+                                autocomplete="off" required />
+                            <button type="button" class="toggle-btn" id="toggleInput" title="Show / Hide"
+                                onclick="toggleInputPass()">👁</button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-add">+ Save to Vault</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <div class="vault-header">
+                    <div class="card-title" style="margin-bottom:0">Saved Entries</div>
+                    <div class="vault-count">Total: <span id="countDisplay"></span></div>
+                </div>
+                <ul class="vault-list" id="vaultList">
+                    
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 PassVault. All rights reserved by Blaze.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
