@@ -137,3 +137,8 @@ entryForm.addEventListener('submit', (e) => {
     existingCheck();
 
 })
+
+
+function github(){
+    window.open('https://github.com/Hasnain-Sayed/password-manager.git', '_blank');
+}
